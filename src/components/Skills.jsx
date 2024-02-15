@@ -57,6 +57,7 @@ export const Skills = () => {
             <p className='my-4'>Tailwind CSS</p>
           </div>
           {/* Firebase */}
+        
           <div className='hover:scale-110 transition duration-500'>
             <img className='w-20 mx-auto' src={FireBase} alt='Firebase icon' />
             <p className='my-4'>Firebase</p>
