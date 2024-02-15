@@ -7,7 +7,10 @@
 
 @layer base {
     body {
-        @apply bg-gradient-to-b from-blue-100 via-blue-500 to-blue-300;
+        @apply bg-gradient-to-r from-blue-400 to-green-400
+
+        ;
+        
         
         @apply font-[Poppins];
         

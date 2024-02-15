@@ -12,32 +12,32 @@ export default function Navbar() {
   return (
     <div
       id="navbar"
-      className="fixed w-full h-[80px] flex items-center px-4 text-black bg-white text-xl"
+      className="w-full bg-emerald-750  h-[80px] flex items-center justify-center px-4 text-white text-xl"
     >
       <div className="pr-4 font-bold">
       <Link to="skills" smooth={true} duration={500}>
-            Vitaliy Vitanskyy
+          
           </Link>
       </div>
       {/* menu */}
 
       <ul className="hidden md:flex">
-        <li className="hover:text-indigo-700">
+        <li className="text-white z-200 font-bold group border-white rounded-full border px-2  flex items-center transition duration-300 ease-in-out transform hover:bg-white hover:text-black hover:scale-100">
           <Link to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li className="hover:text-indigo-700">
+        <li className="text-white z-200 font-bold group border-white rounded-full border px-2  flex items-center transition duration-300 ease-in-out transform hover:bg-white hover:text-black hover:scale-100">
           <Link to="work" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
-        <li className="hover:text-indigo-700">
+        <li className="text-white z-200 font-bold group border-white rounded-full border px-2  flex items-center transition duration-300 ease-in-out transform hover:bg-white hover:text-black hover:scale-100">
           <Link to="test1" smooth={true} duration={500}>
             Resume
           </Link>
         </li>
-        <li className="hover:text-indigo-700">
+        <li className="text-white z-200 font-bold group border-white rounded-full border px-2  flex items-center transition duration-300 ease-in-out transform hover:bg-white hover:text-black hover:scale-100">
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
