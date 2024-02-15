@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLineFill } from "react-icons/bs";
@@ -24,7 +23,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="text-white z-200 font-bold group border-white rounded-full border px-2  flex items-center transition duration-300 ease-in-out transform hover:bg-white hover:text-black hover:scale-100">
-          <Link to="projects" smooth={true} duration={500}>
+          <Link to="work" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
