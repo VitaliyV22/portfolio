@@ -1,69 +1,49 @@
-import React from 'react';
-import HTML from '../assets/html.png';
-import CSS from '../assets/css.png';
-import JavaScript from '../assets/javascript.png';
-import ReactImg from '../assets/react.png';
-import Node from '../assets/node.png';
-import FireBase from '../assets/firebase.png';
-import GitHub from '../assets/github.png';
-import Tailwind from '../assets/tailwind.png';
-import Mongo from '../assets/mongo.png';
-import PostSQL from '../assets/PostgreSQL.png';
+import React from "react";
+import BootStrap from "../assets/icons8-bootstrap-480.png";
+import Css from "../assets/icons8-css-480.png";
+import Html from "../assets/icons8-html-5-480.png";
+import Jquery from "../assets/icons8-jquery-is-a-javascript-library-designed-to-simplify-html-96.png";
+import Tailwind from "../assets/tailwind.png";
+import react from "../assets/react.png";
+import Js from "../assets/icons8-javascript-480.png";
+import NextJs from "../assets/next-js.svg";
 
-export const Skills = () => {
+const Skills = () => {
+  const skills = [
+    { name: "HTML", Image: Html },
+    { name: "CSS", Image: Css },
+    { name: "Javascript", Image: Js },
+    { name: "Jquery", Image: Jquery },
+    { name: "React", Image: react },
+    { name: "Tailwind Css", Image: Tailwind },
+    { name: "BootStrap", Image: BootStrap },
+    { name: "Next JS", Image: NextJs}
+  ];
   return (
-    <div name='skills' className='w-full h-screen text-white '>
-      {/* Container */}
-      <div className='max-w-4xl mx-auto p-8 flex flex-col justify-center h-full'>
-        <div className='text-center'>
-          <p className='text-5xl font-bold mb-4 border-b-4 border-orange-600 inline-block'>Skills</p>
-          <p className='py-4 text-lg'>These are the technologies I've worked with.</p>
-        </div>
-
-        <div className='grid grid-cols-2 sm:grid-cols-4 gap-8'>
-          {/* HTML */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={HTML} alt='HTML icon' />
-            <p className='my-4'>HTML</p>
-          </div>
-          {/* CSS */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={CSS} alt='CSS icon' />
-            <p className='my-4'>CSS</p>
-          </div>
-          {/* JavaScript */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={JavaScript} alt='JavaScript icon' />
-            <p className='my-4'>JavaScript</p>
-          </div>
-          {/* React */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={ReactImg} alt='React icon' />
-            <p className='my-4'>React</p>
-          </div>
-          {/* Node */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={Node} alt='Node.js icon' />
-            <p className='my-4'>Node.js</p>
-          </div>
-          {/* PostgresSQL */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={PostSQL} alt='PostgreSQL icon' />
-            <p className='my-4'>PostgreSQL</p>
-          </div>
-          {/* Tailwind */}
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={Tailwind} alt='Tailwind CSS icon' />
-            <p className='my-4'>Tailwind CSS</p>
-          </div>
-          {/* Firebase */}
-        
-          <div className='hover:scale-110 transition duration-500'>
-            <img className='w-20 mx-auto' src={FireBase} alt='Firebase icon' />
-            <p className='my-4'>Firebase</p>
-          </div>
+    <div id="skills" className=" text-white py-12">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-8 text-center">Skills</h2>
+        <hr className="opacity-10"/>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className={`text-center transform transition duration-300 hover:scale-105`}
+            >
+              <a href={skill.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={skill.Image}
+                  alt={skill.name}
+                  className="w-20 mx-auto mb-4 "
+                />
+              </a>
+              <p className="font-bold">{skill.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+export default Skills ;

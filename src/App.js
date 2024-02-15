@@ -1,12 +1,9 @@
-
 import Home from "./components/Home";
-import { Skills } from "./components/Skills";
-import { Work } from "./components/Work";
 import Contact from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Navbar from "./components/Navbar";
-
-
+import  Skills from "./components/Skills";
+import Work from "./components/Work";
 
 
 function App() {
@@ -16,10 +13,9 @@ function App() {
       <Home />
       <Skills />
       <Work />
+        
       <Contact />
       <Footer />
-      
-      
     </div>
   );
 }
