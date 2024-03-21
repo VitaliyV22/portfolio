@@ -5,19 +5,19 @@ import Ergo from "../assets/projects/ergo.png";
 const Work = () => {
   const projects = [
     {
-      name: "Project 1",
+      name: "Ergo Style",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies velit id tellus commodo, at tempor lacus ultrices.",
-      languages: ["HTML", "CSS", "JavaScript"],
+        "-ErgoStyle showcases a range of ergonomic chairs and desks, along with features and benefits, to attract potential customers interested in improving their workspace setup.",
+      languages: ["HTML", "Tailwind CSS", "JavaScript" ,"React", "Next JS"],
       previewImage: Ergo,
       githubLink: "https://github.com/VitaliyV22/Waybeyond",
       demoLink: "https://master.d2nv73m0bi1w8n.amplifyapp.com/",
     },
     {
-      name: "Project 2",
+      name: "Lord of the Rings Librarian",
       description:
         "Sed scelerisque, velit nec gravida consectetur, ipsum felis sollicitudin nulla, a pretium justo magna et urna.",
-      languages: ["React", "Tailwind CSS"],
+      languages: ["Javascript","React", "Tailwind CSS", "Next JS"],
       previewImage: LOR,
       githubLink: "https://github.com/VitaliyV22/Lord-of-The-Rings-Library",
       demoLink: "https://master.dznzdu9yy1b1u.amplifyapp.com/",
@@ -41,37 +41,37 @@ const Work = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-800 p-6 rounded-lg flex flex-col justify-between"
+              className="border border-white p-6 rounded-lg flex flex-col justify-between"
             >
               <img
                 src={project.previewImage}
                 alt={project.name}
-                className="mb-4 rounded-lg h-48 w-full object-cover"
+                className="mb-4 rounded-lg h-48 w-full  object-cover"
               />
-              <div>
-                <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="bg-white border rounded-lg p-2 mb-3 text-black">
+                <h3 className="text-xl  font-bold mb-2">{project.name}</h3>
+                <p className="text-black-400 mb-4">{project.description}</p>
               </div>
               <div className="flex flex-wrap">
                 {project.languages.map((language, index) => (
                   <span
                     key={index}
-                    className="bg-gray-700 px-2 py-1 text-sm rounded-md mr-2 mb-2"
+                    className="bg-white text-black font-bold px-2 py-1 text-sm rounded-md mr-2 mb-2"
                   >
                     {language}
                   </span>
                 ))}
               </div>
-              <div className="flex justify-between mt-4">
+              <div className="flex gap-3 mt-4">
                 <a
                   href={project.githubLink}
-                  className="text-indigo-500 hover:text-indigo-400"
+                  className="text-white bg-indigo-400 border border-indigo-500 rounded-lg p-2 font-bold"
                 >
                   Github
                 </a>
                 <a
                   href={project.demoLink}
-                  className="text-indigo-500 hover:text-indigo-400"
+                  className="text-white bg-indigo-400 border border-indigo-500 rounded-lg p-2 font-bold"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
