@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-scroll";
 
+
+
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
-
+  const skills = [
+   
+  
+  ];
   return (
     <div
       id="navbar"
@@ -21,7 +26,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex gap-5  text-xl">
-      <Link
+        <Link
           to="work"
           smooth={true}
           duration={500}
@@ -35,7 +40,7 @@ export default function Navbar() {
           duration={500}
           className="text-white z-200  transition duration-300 ease-in-out transform cursor-pointer  hover:scale-100 "
         >
-          <a>Resume</a>
+          <a> </a>
         </Link>
         <Link
           to="contact"
@@ -47,8 +52,9 @@ export default function Navbar() {
         </Link>
         <a
           className="hover:text-white   text-teal-300"
-          href="https://github.com/VitaliyV22
+          href="https://github.com/VitaliyV22 
         "
+          target="_blank"
         >
           {" "}
           <FaGithub size={25} />{" "}
@@ -57,12 +63,12 @@ export default function Navbar() {
           className="hover:text-white   text-teal-300"
           href="https://www.linkedin.com/in/vitaliy-vitanskyy/
         "
+          target="_blank"
         >
           {" "}
           <FaLinkedin size={28} />{" "}
         </a>
       </div>
-    
 
       {/* mobile menu */}
       <div>
