@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLineFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
@@ -9,17 +7,21 @@ export default function Navbar() {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="w-full h-[80px] flex items-center justify-between px-10 text-white text-xl">
+    <div
+      id="navbar"
+      className="w-full h-[80px] flex items-center  justify-between px-20 "
+    >
       {/* menu */}
 
-      <div className="hidden lg:flex items-center font-mono gap-5  w-auto h-auto">
+      <div className="hidden lg:flex items-center font-mono gap-5 w-full  h-auto">
         <Link to="home" smooth={true} duration={500}>
-          <a className="z-200 text-4xl font-bold cursor-pointer transition duration-300 ease-in-out transform  hover:scale-100 ">
+          <a className="z-200 text-4xl font-bold bg-teal-300 rounded-3xl p-1 cursor-pointer transition duration-300 ease-in-out transform text-slate-900 hover:scale-100 ">
             VV
           </a>
         </Link>
-
-        <Link
+      </div>
+      <div className="flex gap-5  text-xl">
+      <Link
           to="work"
           smooth={true}
           duration={500}
@@ -28,7 +30,7 @@ export default function Navbar() {
           <a>Projects</a>
         </Link>
         <Link
-          to="test1"
+          to=""
           smooth={true}
           duration={500}
           className="text-white z-200  transition duration-300 ease-in-out transform cursor-pointer  hover:scale-100 "
@@ -60,12 +62,7 @@ export default function Navbar() {
           <FaLinkedin size={28} />{" "}
         </a>
       </div>
-
-      <div>
-        <ul className=" ">
-          <li></li>
-        </ul>
-      </div>
+    
 
       {/* mobile menu */}
       <div>

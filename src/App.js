@@ -2,7 +2,6 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Navbar from "./components/Navbar";
-
 import Work from "./components/Work";
 import { About } from "./components/About";
 
